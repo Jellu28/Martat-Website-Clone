@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+svg {
+  width: 170px;
+}
+.header__top {
+  background: #2669ab;
+  padding: 8px 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header__top__left a:first-of-type {
+  margin-right: 30px;
+}
+
+.header__top a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+.header__top__left a:hover,
+.header__top__right a:hover {
+  text-decoration: underline;
+}
+
+.header__top i {
+  font-size: 25px;
+  color: #fff;
+  position: relative;
+  top: 2px;
+  margin-right: 10px;
+}
+.header__top__right a {
+  font-size: 16px;
+}
+.header__top__right a:not(:last-of-type) {
+  margin-right: 10px;
+}
+.banner {
+  width: 100%;
+  background-image: url("img/Runebergin-torttu.jpg");
+  height: 59vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position-y: -70px;
+}
+
+.header__bottom {
+  width: 100%;
+  padding: 20px 10px;
+  align-items: center;
+  overflow: hidden;
+}
+.header__bottom i {
+  color: #2669ab;
+  font-size: 30px;
+}
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  color: #2669ab;
+  cursor: pointer;
+}
+/* -------- HEADER BOTTOM --------- */
+.header__bottom {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 100;
+}
+.header__bottom .fa-magnifying-glass {
+  position: relative;
+  color: #444444;
+  right: 650px;
+  font-size: 20px;
+}
+.header__bottom input {
+  width: 650px;
+  padding: 12px 50px;
+  font-size: 18px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  margin-left: 60px;
+  background: #f6f3f3;
+}
+.header__bottom a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2669ab;
+  margin-right: 40px;
+}
+.header__bottom button {
+  width: 120px;
+  padding: 12px 20px;
+  color: #2669ab;
+  border: 0;
+  font-size: 18px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: #fff;
+  border: 2px solid #2669ab;
+  transition: all 500ms ease;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.header__bottom button:hover {
+  background: #2669ab;
+  color: #fff;
+}
+.header__bottom button:first-of-type {
+  background-color: #2669ab;
+  color: #fff;
+  width: 170px;
+  margin-right: 10px;
+}
+.header__bottom button:first-of-type:hover {
+  background: #fff;
+  color: #2669ab;
+}
+/* -------- HEADER NAV --------- */
+
+.menu__bar {
+  padding: 30px 0;
+  width: 70%;
+}
+
+.menu__bar ul {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+.menu__bar > ul > li {
+  list-style: none;
+  position: relative;
+}
+.menu__bar > ul > li::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: 4px;
+  bottom: -30px;
+  width: 100%;
+  height: 3px;
+  background: #2669ab;
+  opacity: 0;
+  transform: scaleX(0);
+  transition:
+    transform 500ms ease,
+    opacity 500ms ease;
+}
+.menu__bar > ul > li:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.menu__bar ul li a {
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+}
+
+.menu__bar ul li i {
+  font-size: 12px;
+  margin-left: 5px;
+  transition: 500ms;
+}
+.menu__bar ul li:hover > i {
+  transform: translateY(2px);
+}
+
+/* -------- SUBMENUT --------- */
+
+.submenu__ruoka,
+.submenu__puutarha,
+.submenu__kodinhoito,
+.submenu__omat__rahat,
+.submenu__teemat,
+.submenu__jarjesto__row {
+  display: none;
+}
+.menu__bar ul li:hover .submenu__ruoka,
+.menu__bar ul li:hover .submenu__puutarha,
+.menu__bar ul li:hover .submenu__kodinhoito,
+.menu__bar ul li:hover .submenu__omat__rahat,
+.menu__bar ul li:hover .submenu__teemat {
+  display: flex;
+  position: absolute;
+  background: #fff;
+  margin-left: -15px;
+}
+.menu__bar ul li:hover .submenu__jarjesto__row {
+  margin-left: -710px;
+  position: absolute;
+  display: flex;
+  background: #fff;
+  z-index: 10;
+}
+
+.menu__bar ul:hover .submenu__ruoka,
+.menu__bar ul li:hover .submenu__puutarha,
+.menu__bar ul li:hover .submenu__kodinhoito,
+.menu__bar ul li:hover .submenu__omat__rahat,
+.menu__bar ul li:hover .submenu__teemat,
+.menu__bar ul li:hover .submenu__jarjesto__row {
+  border-bottom: 1px solid #ddd;
+}
+
+.menu__bar ul li:hover .submenu__ruoka ul,
+.menu__bar ul li:hover .submenu__puutarha ul,
+.menu__bar ul li:hover .submenu__kodinhoito ul,
+.menu__bar ul li:hover .submenu__omat__rahat ul,
+.menu__bar ul li:hover .submenu__teemat ul {
+  display: block;
+  margin: 40px 10px 20px 30px;
+}
+
+.menu__bar ul li:hover .submenu__jarjesto__row ul {
+  display: block;
+  padding: 20px 0;
+}
+
+.menu__bar ul li:hover .submenu__jarjesto__row ul {
+  width: 350px;
+}
+
+.menu__bar ul li:hover .submenu__jarjesto__row ul li a {
+  font-size: 16px;
+  font-weight: 400;
+}
+.submenu__jarjesto__col h2 {
+  padding: 50px 30px 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #2669ab;
+}
+.submenu__jarjesto__col ul li {
+  padding-bottom: 10px;
+  list-style: none;
+}
+.submenu__jarjesto__col {
+  margin-right: -100px;
+}
+
+.menu__bar ul li:hover .submenu__ruoka ul li,
+.menu__bar ul li:hover .submenu__puutarha li,
+.menu__bar ul li:hover .submenu__kodinhoito ul li,
+.menu__bar ul li:hover .submenu__omat__rahat ul li,
+.menu__bar ul li:hover .submenu__teemat ul li {
+  width: 380px;
+  padding: 10px;
+  list-style: none;
+}
+.menu__bar ul li:hover .submenu__ruoka ul li a,
+.menu__bar ul li:hover .submenu__puutarha ul li a,
+.menu__bar ul li:hover .submenu__kodinhoito ul li a,
+.menu__bar ul li:hover .submenu__omat__rahat ul li a,
+.menu__bar ul li:hover .submenu__teemat ul li a {
+  font-size: 18px;
+  font-weight: 400;
+}
+.menu__bar ul li:hover .submenu__ruoka ul li a:hover,
+.menu__bar ul li:hover .submenu__puutarha ul li a:hover,
+.menu__bar ul li:hover .submenu__kodinhoito ul li a:hover,
+.menu__bar ul li:hover .submenu__omat__rahat ul li a:hover,
+.menu__bar ul li:hover .submenu__teemat ul li a:hover,
+.menu__bar ul li:hover .submenu__jarjesto__row ul li a:hover {
+  text-decoration: underline;
+  color: #888;
+}
+
+/* dorabotat siniju liniju pri hover i border top */
+
+.banner__bottom {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.banner__bottom button {
+  background: #2669ab;
+  color: #fff;
+  padding: 13px 15px;
+  border-radius: 3px;
+  border: 0;
+  font-size: 22px;
+  font-weight: 700;
+  position: fixed;
+  left: 83%;
+  top: 91.5%;
+  box-shadow: 0px 2px 12px -8px rgba(255, 255, 255, 0.75);
+}
+.banner__bottom a {
+  font-weight: 700;
+  color: #2669ab;
+  margin-left: -40px;
+}
+.banner__bottom a i {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+}
+
+/* -------- RESEPTTI --------- */
+
+.resepti {
+  width: 95%;
+  margin: 0 auto;
+}
+.resepti h1 {
+  font-size: 60px;
+  color: #2669ab;
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-family: "Glyphicons Halflings";
+}
+.resepti p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.annos {
+  display: flex;
+  font-size: 18px;
+  font-weight: 300;
+}
+.annos .print {
+  color: #2669ab;
+  position: relative;
+  bottom: 2px;
+}
+.annos .print i {
+  font-size: 25px;
+  margin-right: 7px;
+  margin-left: 20px;
+}
+.avainsanat {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+.avainsanat ul li {
+  display: inline-flex;
+}
+.avainsanat ul li a {
+  border: 1px solid #2669ab;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  color: #2669ab;
+  font-weight: normal;
+}
+.avainsanat ul li:first-of-type {
+  margin-left: 10px;
+}
+
+.avainsanat ul li a:hover {
+  text-decoration: underline;
+}
+/* -------- VALMISTUS START--------- */
+
+.valmistus {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.valmistus h2 {
+  font-size: 45px;
+  color: #2669ab;
+  font-weight: 800;
+  font-family: "Glyphicons Halflings";
+  margin-bottom: 30px;
+}
+.valmistus p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.valmistus__start {
+  flex-basis: 50%;
+  margin-bottom: 30px;
+}
+.valmistus__start ol {
+  font-size: 18px;
+  line-height: 27px;
+  margin-left: 50px;
+  margin: 0 0 40px 50px;
+}
+.valmistus__start ol li:not(:last-of-type) {
+  border-bottom: 1px solid #ececec;
+}
+
+.valmistus__start .testattu {
+  margin-top: 40px;
+  font-size: 18px;
+  border-bottom: 1px solid #ececec;
+}
+/* -------- VALMISTUS MIDDLE--------- */
+.valmistus__middle {
+  flex-basis: 15%;
+}
+.valmistus__middle h3 {
+  color: #2669ab;
+  font-size: 25px;
+  font-weight: 800;
+}
+.valmistus__end {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 50%;
+}
+.valmistus__end h3 {
+  font-size: 23px;
+  color: #2669ab;
+  font-weight: 800;
+}
+.valmistus__end__hiili p {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+  font-weight: 200;
+}
+.valmistus__end__ravinto {
+  flex-basis: 50%;
+}
+.valmistus__end__ravinto li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  border-bottom: 1px solid #ececec;
+}
+.valmistus__end__ravinto li:not(:nth-child(4)) {
+  line-height: 40px;
+}
+
+.valmistus__end__ravinto li {
+  margin-bottom: 1px solid red;
+}
+/* -------- FOOTER --------- */
+
+footer {
+  background: #2669ab;
+  color: #fff;
+  text-align: center;
+  padding: 6% 0 7%;
+  width: 100%;
+}
+.footer {
+  width: 95%;
+}
+footer h2 {
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+.footer p {
+  margin-bottom: 60px;
+}
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 7%;
+  align-items: flex-start;
+}
+.footer__col {
+  text-align: left;
+}
+.footer__col ul li {
+  list-style: none;
+  line-height: 35px;
+}
+.footer__col ul li {
+  color: #fff;
+  font-size: 18px;
+  transition: all 500ms;
+}
+.footer__col ul li a {
+  color: #fff;
+}
+.footer__col .fa-brands {
+  margin-right: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.footer__col .fa-brands:hover {
+  text-decoration: underline;
+}
+.footer__col ul li:hover,
+.footer__col ul li a:hover {
+  transform: translate(2px);
+  color: #ddd;
+}
+
+/* MEDIA */
+
+@media (max-width: 1440px) {
+  .banner {
+    height: 500px;
+    background-position-y: -30px;
+  }
+}
+
+@media (max-width: 891px) {
+  .banner {
+    height: 300px;
+    background-position-y: -30px;
+  }
+}
+@media (max-width: 640px) {
+  .banner {
+    height: 250px;
+    background-position-y: -20px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 425px) {
+  .banner {
+    height: 130px;
+    background-position-y: -10px;
+    object-fit: cover;
+  }
+}
